@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <title>Document</title>
 </head>
 <style>
@@ -62,17 +62,25 @@
         color: blue;
 
     }
-    h3 {
-            color: rgba(116, 181, 20, 0.811); 
-            font-size: 20px; 
-            font-weight: bold; 
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-    h2 {
-          color: darkgreen;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-       }
+    .leaf-sub-div {
+        color: black;
+        font-weight: bold;
+        margin-left: 25px;
+        margin-top: 10px;
+        font-size: 20px;
+
+    }
+
+    h2 {
+        color: red;
+        text-decoration: underline;
+        margin-top: 10px;
+        margin-left: 5px;
+
+
+    }
+
     .image-div {
         width: 40%;
         min-height: 300px;
@@ -81,6 +89,7 @@
         margin-left: 30px;
         margin-bottom: 10px;
         float: left;
+        background-color: beige;
     }
 
     .leaf-details-div {
@@ -91,10 +100,11 @@
         border-bottom-right-radius: 60px;
         margin-left: 30px;
         margin-top: 310px;
-        background-color: #FEFEFE;
-        background-image: url(images/leaf2.jpg) ;
-        background-blend-mode: lighten;
+        background-color: beige;
+        padding-left: 15px;
+        padding-top: 10px;
     }
+
     .comment-div {
         width: 50%;
         min-height: 600px;
@@ -102,74 +112,13 @@
         margin-right: 35px;
         float: right;
     }
-    .like-button, .unlike-button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            position: relative;
-            left: 300px;
-        }
-
-        .liked .thumbs-up-icon {
-            animation: thumbsUp 0.5s linear;
-            color: #3498db; /* Liked color */
-        }
-
-        .unliked .thumbs-down-icon {
-            animation: thumbsDown 0.5s linear;
-            color: #e74c3c; /* Unliked color */
-         
-        }
-
-        @keyframes thumbsUp {
-            0% {
-                transform: translateY(0);
-            }
-            25% {
-                transform: translateY(-5px);
-            }
-            50% {
-                transform: translateY(0);
-            }
-            75% {
-                transform: translateY(-5px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes thumbsDown {
-            0% {
-                transform: translateY(0);
-            }
-            25% {
-                transform: translateY(5px);
-            }
-            50% {
-                transform: translateY(0);
-            }
-            75% {
-                transform: translateY(5px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-        .blue{
-            background:transparent;
-	        border-color: #cdd830;
-            width: 300px;  
-            height: 30px;  
-            border: outset;
-            border-right: none;
-            border-bottom: 1px solid rgb(31, 216, 102);  
-            border-radius: 3px;  
-            padding-left: 8px;  
-            box-shadow: 7px;
-        }
-   
+    .like-button
+    {
+        float: right;
+        margin-right: 100px;
+        font-size:30px;
+        margin-bottom: 30px;
+    }
 </style>
 
 <body>
@@ -194,20 +143,22 @@
     </div>
 
     <div class="leaf-details-div">
+        <!----Leaf Data-------->
         <h2>Leaf Details:</h2><br>
-       
-        <h3>Name: <input class="blue" type="text"  name="f1_name" placeholder="leaf name" required="required" ><br><br></h3>
-        <h3>Leaf Apices: <input class="blue" type="text"  name="f1_name" placeholder="" required="required" ><br><br></h3>
-        <h3>Leaf Basics: <input class="blue" type="text"  name="f1_name" placeholder="" required="required" ><br><br></h3>
-        <h3>Leaf Margin: <input class="blue" type="text"  name="f1_name" placeholder="" required="required" ><br><br></h3>
-        <button class="like-button liked" onclick="toggleLike(this)">
-            <i class="far fa-thumbs-up thumbs-up-icon"></i>
-        </button>
-        <button class="unlike-button unliked" onclick="toggleLike(this)">
-            <i class="far fa-thumbs-down thumbs-down-icon"></i>
-        </button>
-    
-        <p id="like-status"></p>
-       
+        <div class="leaf-sub-div">
+            <p>Name:</p><br>
+            <p>Leaf Apices: </p><br>
+            <p>Leaf Basics: </p><br>
+            <p>Leaf Margin: </p><br>
+        </div>
+        <!----like button----->
+        <div class="like-button">
+            <i class="fa-solid fa-thumbs-up"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-thumbs-down"></i>
+        </div>
+
+
     </div>
-  
+
+
+</body>

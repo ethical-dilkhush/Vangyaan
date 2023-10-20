@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        text-decoration: none;
+
+    }
+
+    body {
+        background-color: #faf7d9;
+    }
+
+    .navbar {
+        background: #7ae66c;
+        padding-left: 15px;
+        padding-right: 60px;
+        font-family: Georgia, serif;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: 60px;
+        line-height: 60px;
+    }
+
+    .navdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+    }
+
+    .logo a {
+        font-size: 35px;
+        font-weight: 600;
+        color: white;
+    }
+
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    li a {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 60px;
+
+    }
+
+    li a:hover {
+        color: blue;
+
+    }
+
+    .leaf-sub-div {
+        color: black;
+        font-weight: bold;
+        margin-left: 25px;
+        margin-top: 10px;
+        font-size: 20px;
+
+    }
+
+    h2 {
+        color: red;
+        text-decoration: underline;
+        margin-top: 10px;
+        margin-left: 5px;
+
+
+    }
+
+    .image-div {
+        width: 40%;
+        min-height: 300px;
+        border: 2px solid black;
+        border-radius: 60px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+        float: left;
+        background-color: beige;
+    }
+
+    .leaf-details-div {
+        width: 37%;
+        min-height: 300px;
+        border: 2px solid black;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 60px;
+        margin-left: 30px;
+        margin-top: 310px;
+        background-color: beige;
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+
+    .comment-div {
+        width: 50%;
+        min-height: 600px;
+        border: 2px solid black;
+        margin-right: 35px;
+        float: right;
+    }
+    .like-button
+    {
+        float: right;
+        margin-right: 100px;
+        font-size:30px;
+        margin-bottom: 30px;
+    }
+</style>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Vangyaan</a></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <b style="font-weight: bold; font-size:25px; margin-left: 80px;">Image Name</b>
+    <!------container-->
+    <div class="container">
+
+        <div class="image-div"></div>
+        <div class="comment-div"></div>
+
+    </div>
+
+    <div class="leaf-details-div">
+        <!----Leaf Data-------->
+        <h2>Leaf Details:</h2><br>
+        <div class="leaf-sub-div">
+            <p>Name:</p><br>
+            <p>Leaf Apices: </p><br>
+            <p>Leaf Basics: </p><br>
+            <p>Leaf Margin: </p><br>
+        </div>
+        <!----like button----->
+        <div class="like-button">
+            <i class="fa-solid fa-thumbs-up"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-thumbs-down"></i>
+        </div>
+
+
+    </div>
+
+
+</body>
