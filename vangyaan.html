@@ -84,8 +84,8 @@
     .image-div {
         width: 40%;
         min-height: 300px;
-        border: 2px solid black;
-        border-radius: 60px;
+        border: 1px solid black;
+        border-radius: 40px;
         margin-left: 30px;
         margin-bottom: 10px;
         float: left;
@@ -95,29 +95,87 @@
     .leaf-details-div {
         width: 37%;
         min-height: 300px;
-        border: 2px solid black;
         border-top-left-radius: 0px;
         border-bottom-right-radius: 60px;
         margin-left: 30px;
-        margin-top: 310px;
+        margin-top: 320px;
         background-color: beige;
         padding-left: 15px;
         padding-top: 10px;
+        background: url('https://shorturl.at/htz18');
+        background-size: cover;
     }
 
     .comment-div {
         width: 50%;
-        min-height: 600px;
-        border: 2px solid black;
+        min-height: 615px;
         margin-right: 35px;
         float: right;
+        padding-left: 40px;
+        padding-top: 20px;
+        background: url('https://shorturl.at/bCFMZ');
+        background-size: cover;
+
     }
-    .like-button
-    {
+
+    .like-button {
         float: right;
         margin-right: 100px;
-        font-size:30px;
-        margin-bottom: 30px;
+        font-size: 30px;
+    }
+
+    #comment-data {
+        width: 90%;
+        min-height: 50px;
+        background-color: white;
+        line-height: 50px;
+        border-style: outset;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    #plus-icon {
+        float: right;
+        margin-top: 15px;
+        font-weight: 100;
+        padding-right: 10px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+
+    .parent {
+
+        float: left;
+        margin-top: 20px;
+        margin-left: 50px;
+
+    }
+
+    .child {
+        width: 230px;
+        min-height: 230px;
+        border: 1px solid black;
+        float: right;
+        margin-top: 35px;
+        margin-right: 45px;
+        background: url('https://shorturl.at/nEKTU');
+        background-size: cover;
+
+    }
+
+    #sub-image {
+        width: 130px;
+        min-height: 60px;
+        border: 1px solid black;
+        margin-bottom: 8px;
+        margin-left: 10px;
+        background: url('https://shorturl.at/nEKTU');
+        background-size: cover;
     }
 </style>
 
@@ -137,14 +195,37 @@
     <!------container-->
     <div class="container">
 
-        <div class="image-div"></div>
-        <div class="comment-div"></div>
+        <div class="image-div">
+
+            <div class="parent">
+                <div id="sub-image"></div>
+                <div id="sub-image"></div>
+                <div id="sub-image"></div>
+                <div id="sub-image"></div>
+            </div>
+
+            <div class="child"></div>
+
+        </div>
+
+        <!--------comment-content----->
+
+        <div class="comment-div">
+            <h1>COMMENT</h1>
+            <div id="comment-data">Plant Name <i class="fa-solid fa-plus" id="plus-icon"></i></div>
+            <div id="comment-data">Leaf apices<i class="fa-solid fa-plus" id="plus-icon"></i></div>
+            <div id="comment-data">Leaf basics<i class="fa-solid fa-plus" id="plus-icon"></i></div>
+            <div id="comment-data">Leaf Margin<i class="fa-solid fa-plus" id="plus-icon"></i></div>
+
+            <!---  </div>-->
+
+        </div>
 
     </div>
 
     <div class="leaf-details-div">
         <!----Leaf Data-------->
-        <h2>Leaf Details:</h2><br>
+        <h2>LEAF DETAILS:</h2><br>
         <div class="leaf-sub-div">
             <p>Name:</p><br>
             <p>Leaf Apices: </p><br>
