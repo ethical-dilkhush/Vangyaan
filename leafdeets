@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        text-decoration: none;
+
+    }
+
+    body {
+        background-color: #faf7d9;
+    }
+
+    .navbar {
+        background: #7ae66c;
+        padding-left: 15px;
+        padding-right: 60px;
+        font-family: Georgia, serif;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        min-height: 60px;
+        line-height: 60px;
+    }
+
+    .navdiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+    }
+
+    .logo a {
+        font-size: 35px;
+        font-weight: 600;
+        color: white;
+    }
+
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    li a {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        margin-left: 60px;
+
+    }
+
+    li a:hover {
+        color: blue;
+
+    }
+    h3 {
+            color: rgba(66, 109, 0, 0.811); 
+            font-size: 20px; 
+            font-weight: bold; 
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    h2 {
+          color: darkgreen;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+       }
+    .image-div {
+        width: 40%;
+        min-height: 300px;
+        border: 2px solid black;
+        border-radius: 20px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+        float: left;
+    }
+
+    .leaf-details-div {
+        width: 39.7%;
+        min-height: 250px;
+        border: 1px solid black;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 40px;
+        margin-left: 30px;
+        margin-top: 310px;
+        background-color: #deddbbcf;
+        background-image: url(images/leaf2.jpg) ;
+        background-blend-mode: lighten;
+        padding: 2%;
+        height: auto;
+    }
+    .comment-div {
+        width: 50%;
+        min-height: 600px;
+        border: 2px solid black;
+        margin-right: 35px;
+        float: right;
+    }
+    .like-button, .unlike-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            position: relative;
+            left: 350px;
+            
+        }
+        .like-button {
+        margin-right: 20px; /* Adjust this value to set the desired space */
+    }
+
+        .liked .thumbs-up-icon {
+            animation: thumbsUp 0.5s linear;
+            color: #3498db; /* Liked color */
+        }
+
+        .unliked .thumbs-down-icon {
+            animation: thumbsDown 0.5s linear;
+            color: #e74c3c; /* Unliked color */
+         
+        }
+
+        @keyframes thumbsUp {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-5px);
+            }
+            50% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes thumbsDown {
+            0% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(5px);
+            }
+            50% {
+                transform: translateY(0);
+            }
+            75% {
+                transform: translateY(5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    .leaf{
+        color: rgba(66, 109, 0, 0.811); 
+            font-size: 20px; 
+            font-weight: bold; 
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }  
+   
+</style>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">Vangyaan</a></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <b style="font-weight: bold; font-size:25px; margin-left: 80px;">Image Name</b>
+    <!------container-->
+    <div class="container">
+
+        <div class="image-div"></div>
+
+        <div class="comment-div"> 
+            <h2> COMMENT: </h2>
+            PLANT NAME:
+		   <select name="plant_name" class="comment"> 
+			<option>Rose</option>
+			<option>Lily</option>
+			<option>Mango</option>
+			
+		    </select><br><br>
+           
+             Leaf Apices:
+             <select name="leaf_apices" class="comment"> 
+              <option>Rose</option>
+              <option>Lily</option>
+              <option>Mango</option>
+              
+              </select><br><br>
+              Leaf Basics:
+              <select name="leaf_basics" class="comment"> 
+               <option>Rose</option>
+               <option>Lily</option>
+               <option>Mango</option>
+               
+               </select><br><br>
+               Leaf Margin:
+               <select name="leaf_margin" class="comment"> 
+                <option>Rose</option>
+                <option>Lily</option>
+                <option>Mango</option>
+                
+                </select><br><br>
+
+        </div>
+
+    </div>
+
+    <div class="leaf-details-div">
+        <h2> Leaf Details:</h2><br>
+
+       <p class="leaf">Name:</p><br>
+       <p class="leaf"> Leaf Apices:</p><br>
+       <p class="leaf"> Leaf Basics:</p><br>
+       <p class="leaf"> Leaf Margin:</p><br>
+      
+         <!--<h3> Name:      <input class="blue" type="text"  name="f1_name" placeholder="leaf name" required="required" ><br><br></h3>
+         <h3> Leaf Apices: <input class="blue" type="text"  name="f1_name" placeholder="" required="required" ><br><br></h3>
+         <h3> Leaf Basics: <input class="blue" type="text"  name="f1_name" placeholder="" required="required" ><br><br></h3>
+         <h3> Leaf Margin: <input class="blue" type="text"  name="f1_name" placeholder="" required="required" ><br><br></h3>-->
+        <button class="like-button liked" onclick="toggleLike(this)">
+            <i class="far fa-thumbs-up thumbs-up-icon"></i>
+        </button>
+        <button class="unlike-button unliked" onclick="toggleLike(this)">
+            <i class="far fa-thumbs-down thumbs-down-icon"></i>
+        </button>
+    
+        <p id="like-status"></p>
+       
+    </div>
+  
+
+   
+    <script>
+        let liked = true;
+
+        function toggleLike(button) {
+            liked = !liked;
+            const likeStatus = document.getElementById("like-status");
+
+            if (liked) {
+                likeStatus.innerText = "You liked this.";
+                button.classList.remove("unliked");
+                button.classList.add("liked");
+            } else {
+                likeStatus.innerText = "You unliked this.";
+                button.classList.remove("liked");
+                button.classList.add("unliked");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
